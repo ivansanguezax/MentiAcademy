@@ -5,30 +5,129 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
         <!--=============== BOXICONS ===============-->
-        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         
         <!--=============== SWIPER CSS ===============-->
         <link rel="stylesheet" href="">
 
         <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Responsive real state website - Bedimcode</title>
+        <title>Menti Academy</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    Menti Academy <i class='bx bxs-home-alt-2'></i>
+                </a>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">
+                                <i class='bx bx-home-alt-2' ></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav__item">
+                            <a href="#courses" class="nav__link">
+                                <i class='bx bxs-graduation'></i>
+                                <span>Cursos</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav__item">
+                            <a href="#teach" class="nav__link">
+                                <i class='bx bx-chalkboard' ></i>
+                                <span>Enseñar</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-info-circle'></i>
+                                <span>Sobre Nosotros</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="button nav__button">
+                    Inscribirse
+                </a>
+            </nav>
         </header>
 
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
-                
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Descubre <br> la nueva forma <br> de aprender
+                        </h1>
+
+                        <p class="home__description">
+                            Encuentra una variedad de cursos para iniciar en el mundo de tecnología desde muy pequeño.
+                        </p>
+
+                        <form action="" class="home__search">
+                            <i class='bx bxs-graduation' ></i>
+                            <input type="search"
+                            placeholder="Busca tu curso..."
+                            class="home__search-input">
+                            <button class="button">Buscar</button>
+                        </form>
+
+                        <div class="home__value">
+                            <div>
+                                <h1 class="home__value-number">
+                                    20 <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Cursos <br>
+                                </span>
+                            </div>
+
+                            <div>
+                                <h1 class="home__value-number">
+                                    100 <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Estudiantes <br>
+                                </span>
+                            </div>
+
+                            <div>
+                                <h1 class="home__value-number">
+                                    20 <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Profesores <br>
+                                </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="home__images">
+                        <div class="home__orbe"></div>
+                        <div class="home__img">
+                            <img src="assets/img/home.jpg" alt="image hero">
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== LOGOS ====================-->
@@ -73,6 +172,6 @@
         <script src=""></script>
 
         <!--=============== MAIN JS ===============-->
-        <script src=""></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
