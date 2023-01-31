@@ -11,7 +11,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -132,17 +132,226 @@
 
             <!--==================== LOGOS ====================-->
             <section class="logos section">
-                
+                <div class="logos__container container grid">
+                    <div class="logos__img">
+                        <img src="assets/img/logo1.png" alt="">
+                    </div>
+
+                    <div class="logos__img">
+                        <img src="assets/img/logo2.png" alt="">
+                    </div>
+
+                    <div class="logos__img">
+                        <img src="assets/img/logo3.png" alt="">
+                    </div>
+
+                    <div class="logos__img">
+                        <img src="assets/img/logo4.png" alt="">
+                    </div>
+                </div>
             </section>
 
             <!--==================== POPULAR ====================-->
-            <section class="section" id="popular">
-                
+            <section class="popular section" id="popular">
+                <div class="container">
+                    <span class="section__subtitle">
+                        La mejor opción
+                    </span>
+                    <h2 class="section__title">
+                        Cursos Populares <span>.</span>
+                    </h2>
+
+                    <div class="popular__container swiper">
+                        <div class="swiper-wrapper">
+                            <article class="popular__card swiper-slide">
+                                <img src="assets/img/popular1.jpg" alt="curso1" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h2 class="popular__price">
+                                        <span> ></span>Roblox
+                                    </h2>
+
+                                    <h3 class="popular__title">
+                                        Curso de Videojuegos
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Esto es la descripcion del curso.
+                                    </p>
+                                </div>
+                            </article>
+
+
+                            <article class="popular__card swiper-slide">
+                                <img src="assets/img/popular2.jpg" alt="curso1" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h2 class="popular__price">
+                                        <span> ></span>Minecraft
+                                    </h2>
+
+                                    <h3 class="popular__title">
+                                        Curso de Videojuegos
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Esto es la descripcion del curso.
+                                    </p>
+                                </div>
+                            </article>
+
+
+                            <article class="popular__card swiper-slide">
+                                <img src="assets/img/popular3.jpg" alt="curso1" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h2 class="popular__price">
+                                        <span> ></span> Inteligencia Artificial
+                                    </h2>
+
+                                    <h3 class="popular__title">
+                                        Curso de Programación
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Esto es la descripcion del curso.
+                                    </p>
+                                </div>
+                            </article>
+
+
+                            <article class="popular__card swiper-slide">
+                                <img src="assets/img/popular4.jpg" alt="curso1" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h2 class="popular__price">
+                                        <span> ></span>Python
+                                    </h2>
+
+                                    <h3 class="popular__title">
+                                        Curso de Programación
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Esto es la descripcion del curso.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="popular__card swiper-slide">
+                                <img src="assets/img/popular5.jpg" alt="curso1" class="popular__img">
+
+                                <div class="popular__data">
+                                    <h2 class="popular__price">
+                                        <span> ></span>Cubo Rubik
+                                    </h2>
+
+                                    <h3 class="popular__title">
+                                        Inteligencia
+                                    </h3>
+
+                                    <p class="popular__description">
+                                        Esto es la descripcion del curso.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class='bx bx-chevron-right' ></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class='bx bx-chevron-left' ></i>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== VALUE ====================-->
             <section class="value section" id="value">
-                
+                <div class="value__container container grid">
+                    <div class="values__images">
+                        <div class="value__orbe"></div>
+
+                        <div class="value__img">
+                            <img src="assets/img/value.jpg" alt="">
+                        </div>
+
+                        <div class="value__content">
+                            <div class="value__data">
+                                <span class="section__subtitle">
+                                    Nuestro Valor
+                                </span>
+                                <h2 class="section__title">
+                                    El valor te lo damos nosotros
+                                </h2>
+                                <p class="value__description">
+                                    Nosotros siempre listos para proporcionar el mejor servicio para ti.
+                                </p>
+                            </div>
+
+                            <div class="value__accordion">
+
+                                <div class="value__accordion-item">
+                                    <header class="value__accordion-header">
+                                        <i class='bx bxs-message-square-x value__accordion-icon' ></i>
+                                        <h3 class="value__accordion-title">
+                                            Nuevos Cursos
+                                        </h3>
+                                        <div class="value__accordion-arrow">
+                                            <i class='bx bxs-down-arrow' ></i>
+                                        </div>
+                                    </header>
+
+                                    <div class="value__accordion-content">
+                                        <p class="value__accordion-description">
+                                            El mejor precio de los cursos nosotros te garantizamos.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="value__accordion-item">
+                                    <header class="value__accordion-header">
+                                        <i class='bx bxs-message-square-x value__accordion-icon' ></i>
+                                        <h3 class="value__accordion-title">
+                                            Los mejores docentes
+                                        </h3>
+                                        <div class="value__accordion-arrow">
+                                            <i class='bx bxs-down-arrow' ></i>
+                                        </div>
+                                    </header>
+
+                                    <div class="value__accordion-content">
+                                        <p class="value__accordion-description">
+                                            El mejor precio de los cursos nosotros te garantizamos.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="value__accordion-item">
+                                    <header class="value__accordion-header">
+                                        <i class='bx bxs-message-square-x value__accordion-icon' ></i>
+                                        <h3 class="value__accordion-title">
+                                            Todo online
+                                        </h3>
+                                        <div class="value__accordion-arrow">
+                                            <i class='bx bxs-down-arrow' ></i>
+                                        </div>
+                                    </header>
+
+                                    <div class="value__accordion-content">
+                                        <p class="value__accordion-description">
+                                            El mejor precio de los cursos nosotros te garantizamos.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </section>
 
             <!--==================== CONTACT ====================-->
@@ -169,7 +378,7 @@
         <script src=""></script>
 
         <!--=============== SWIPER JS ===============-->
-        <script src=""></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
