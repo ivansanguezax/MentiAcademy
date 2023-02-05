@@ -29,7 +29,7 @@
                 <div class="nav__menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">
+                            <a href="#home" class="nav__link active-link">
                                 <i class='bx bx-home-alt-2' ></i>
                                 <span>Inicio</span>
                             </a>
@@ -37,7 +37,7 @@
 
 
                         <li class="nav__item">
-                            <a href="#courses" class="nav__link">
+                            <a href="#popular" class="nav__link">
                                 <i class='bx bxs-graduation'></i>
                                 <span>Cursos</span>
                             </a>
@@ -45,7 +45,7 @@
 
 
                         <li class="nav__item">
-                            <a href="#teach" class="nav__link">
+                            <a href="#value" class="nav__link">
                                 <i class='bx bx-chalkboard' ></i>
                                 <span>Enseñar</span>
                             </a>
@@ -53,13 +53,16 @@
 
                         
                         <li class="nav__item">
-                            <a href="#about" class="nav__link">
+                            <a href="#contact" class="nav__link">
                                 <i class='bx bx-info-circle'></i>
                                 <span>Sobre Nosotros</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <!-- Change color -->
+                <i class='bx bx-moon change-theme' id="theme-button" ></i>
 
                 <a href="#" class="button nav__button">
                     Inscribirse
@@ -269,13 +272,13 @@
             <!--==================== VALUE ====================-->
             <section class="value section" id="value">
                 <div class="value__container container grid">
-                    <div class="values__images">
+                    <div class="value__image">
                         <div class="value__orbe"></div>
 
                         <div class="value__img">
                             <img src="assets/img/value.jpg" alt="">
                         </div>
-
+                    </div>
                         <div class="value__content">
                             <div class="value__data">
                                 <span class="section__subtitle">
@@ -350,29 +353,230 @@
 
                             </div>
                         </div>
-                    </div>
+                    
                 </div>  
             </section>
 
             <!--==================== CONTACT ====================-->
             <section class="contact section" id="contact">
-                
+                <div class="contact__container container grid">
+                    <div class="contact__images">
+                        <div class="contact__orbe"></div>
+                        <div class="contact__img">
+                            <img src="assets/img/contact.png" alt="contacto imagen">
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+
+                        <div class="contact__data">
+                            <span class="section__subtitle">
+                                Contactanos
+                            </span>
+                            <h2 class="section__title">
+                                Facil de contactarnos <span>.</span>
+                            </h2>
+                            <p class="contact__description">
+                                ¿Tienes problemas encontrando algún curso? ¿Necesitas alguna, guía para que te ayudemos? ¿O necesitas consultar algún problema? Solo contáctanos.
+                            </p>
+                        </div>
+
+                        <div class="contact__card">
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-phone-call' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">Llamanos</h3>
+                                        <p class="contact__card-description">
+                                            +59165547510
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button class="button contact__card-button">
+                                    Llama Ahora
+                                </button>
+                            </div>
+
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-message-rounded-dots' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">Manda un mensaje</h3>
+                                        <p class="contact__card-description">
+                                            +59165547510
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button class="button contact__card-button">
+                                    Chat
+                                </button>
+                            </div>
+
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-video' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">VideoLlamada</h3>
+                                        <p class="contact__card-description">
+                                            +59165547510
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button class="button contact__card-button">
+                                    Llama ya
+                                </button>
+                            </div>
+
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-envelope' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">Correo Electronico</h3>
+                                        <p class="contact__card-description">
+                                            +59165547510
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button class="button contact__card-button">
+                                    Envia un correo
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </section>
 
             <!--==================== SUBSCRIBE ====================-->
             <section class="subscribe section">
-                
+                <div class="subscribe__container container">
+                    <h1 class="subscribe__title">
+                        Empieza tus clases ya!
+                    </h1>
+                    <p class="subscribe__description">
+                       Envianos tu correo para saber mas de nuestra empresa 
+                    </p>
+                    <a href="" class="button subscribe__button">
+                        Empezar
+                    </a>
+                </div>
             </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
-            
+            <div class="footer__container container grid">
+                <div>
+                    <a href="" class="footer__logo">
+                        Menti Academy <i class='bx bxs-home-alt-2' ></i>
+                    </a>
+                    <p class="footer__description">
+                        Nuestra mision es darles a los niños <br>
+                        un futuro tecnológico
+                    </p>
+                </div>
+
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">
+                            Sobre Nosotros
+                        </h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="" class="footer__link">Cursos</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Profesores</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Clases</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div>
+                        <h3 class="footer__title">
+                            Sobre Nosotros
+                        </h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="" class="footer__link">Cursos</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Profesores</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Clases</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div>
+                        <h3 class="footer__title">
+                            Sobre Nosotros
+                        </h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="" class="footer__link">Cursos</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Profesores</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="footer__link">Clases</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer__title">
+                            Sobre Nosotros
+                        </h3>
+
+                        <ul class="footer__social">
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-facebook-circle' ></i>
+                            </a>
+
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-instagram-alt' ></i>
+                            </a>
+
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-tiktok' ></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__info container">
+                <span class="footer__copy">
+                    &#169; Menti Academy Todos los derechos.
+                </span>
+            </div>
         </footer>
 
 
         <!--========== SCROLL UP ==========-->
-
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class='bx bx-chevrons-up'></i>
+        </a>
 
         <!--=============== SCROLLREVEAL ===============-->
         <script src=""></script>

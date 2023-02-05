@@ -68,7 +68,8 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: .3s; 
+
 }
 
 h1, h2, h3 {
@@ -97,16 +98,80 @@ button {
 }
 
 /*=============== THEME ===============*/
+.change-theme{
+  font-size: 1.25rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.change-theme:hover{
+  color: var(--first-color);
+}
+
 
 
 /*========== Variables Dark theme ==========*/
 
+body.dark-theme{
+  --first-color: hsl(228, 66%, 62%);
+  --second-color: hsl(25, 57%, 53%);
+  --title-color: hsl(228, 8%, 95%);
+  --text-color: hsl(228, 8%, 70%);
+  --border-color: hsl(228, 16%, 14%);
+  --body-color: hsl(228, 12%,8%);
+  --container-color: hsl(228, 16%, 12%);
+}
 
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
-==========*/
+.dark-theme .home__search,
+.dark-theme .swiper-button-next,
+.dark-theme .swiper-button-prev{
+  border: 3px solid var(--border-color);
+}
 
+
+.dark-theme .nav__menu,
+.dark-theme .home__img,
+.dark-theme .popular__card:hover,
+.dark-theme .value__image,
+.dark-theme .accordion-open,
+.dark-theme .accordion-open .value__accordion-icon,
+.dark-theme .accordion-open .value__accordion-arrow,
+.dark-theme .contact__img,
+.dark-theme .contact__card-box:hover,
+.dark-theme .scrollup
+{
+  box-shadow: none;
+}
+.dark-theme .value__orbe,
+.dark-theme  .value__accordion-icon,
+.dark-theme .value__accordion-arrow,
+.dark-theme .contact__orbe,
+.dark-theme .contact__card i,
+.dark-theme .contact__card-button,
+.dark-theme .subscribe__container
+{
+  background-color: var(--container-color);
+}
+
+.dark-theme .subscribe__container{
+  border: 6px solid var(--border-color);
+}
+
+.dark-theme .subscribe__description{
+  color: var(--text-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+  background-color: hsl(228, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(228, 4%, 25%);
+}
+.dark-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(228, 4%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -219,8 +284,19 @@ button {
   color: var(--first-color);
 
 }
-/* Active link */
 
+.scroll-header .change-theme{
+  color: var(--title-color);
+}
+
+/* Active link */
+.active-link{
+  background: linear-gradient(101deg,
+                                hsl(228,66%, 53%),
+                                  hsl(228, 66%, 47%));
+  color: #fff;
+  box-shadow: 0 4px 8px hsla(229, 66%, 45%, .25);
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -439,7 +515,7 @@ button {
   row-gap: 3rem;
 }
 
-.value__images{
+.value__image{
   position: relative;
   display: flex;
   justify-content: center;
@@ -543,22 +619,264 @@ button {
 }
 
 /*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 2rem;
+}
 
+.contact__images{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
+.contact__orbe{
+  width: 266px;
+  height: 316px;
+  background-color: hsl(228, 24%, 97%);
+  border-radius: 135px 135px 16px 16px;
+}
+
+.contact__img{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 125px 125px 12px 12px;
+  inset: 0;
+  margin: auto;
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+.contact__description{
+  font-size: var(--small-font-size);
+  margin-bottom: 2.5rem;
+}
+
+.contact__card{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem .75rem;
+}
+
+.contact__card-box{
+  background-color: var(--body-color);
+  border: 2px solid var(--border-color);
+  padding: 1.23rem .75rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.contact__card-info{
+  display: flex;
+  align-items: flex-start;
+  column-gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact__card i{
+  padding: 6px;
+  background-color: var(--first-color-lighten);
+  border-radius: 6px;
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.contact__card-title{
+  font-size: var(--normal-font-size);
+}
+
+.contact__card-description{
+  font-size: var(--small-font-size);
+}
+
+.contact__card-button{
+  font-size: var(--small-font-size);
+  padding: 14px 0;
+  width: 100%;
+  border-radius: .25rem;
+  background: var(--first-color-lighten);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  box-shadow: none;
+}
+
+.contact__card-button:hover{
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+.contact__card-box:hover{
+  box-shadow: 0 8px 24px hsla(228, 66%, 45%, .25);
+}
 /*=============== SUBSCRIBE ===============*/
+.subscribe{
+  padding: 2.5rem 0;
+}
 
+.subscribe__container{
+  background-color: var(--first-color);
+  padding: 3rem 2rem;
+  border-radius: 1.25rem;
+  border: 6px solid var(--first-color-light);
+  text-align: center;
+}
 
+.subscribe__title{
+  font-size: var(--h2-font-size);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.subscribe__description{
+  color: hsl(228, 90%, 92% );
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.subscribe__button{
+  border: 2px solid #fff;
+  background: var(--first-color-light);
+  font-size: var(--small-font-size);
+
+}
+
+.subscribe__button:hover{
+  background-color: var(--first-color);
+}
 /*=============== FOOTER ===============*/
+.footer__container{
+  row-gap: 2.5rem;
+}
 
+.footer__logo{
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  margin-bottom: .75rem;
+}
 
+.footer__logo i{
+  font-size: 1.25rem;
+}
+
+.footer__description,
+.footer__link{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.footer__content,
+.footer__links{
+  display: grid;
+}
+
+.footer__content{
+  grid-template-columns: repeat(2,max-content);
+  gap: 2.5rem 4rem;
+}
+
+.footer__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.footer__links{
+  row-gap: .5rem;
+}
+
+.footer__link{
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__link:hover{
+  color: var(--title-color);
+}
+
+.footer__social{
+  display: flex;
+  column-gap: 1rem;
+}
+
+.footer__social-link{
+  font-size: 1.25rem;
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__social-link:hover{
+  color: var(--title-color);
+}
+
+.footer__info,
+.footer__privacy{
+  display: flex;
+}
+
+.footer__info{
+  padding-bottom: 6rem;
+  margin-top: 5.5rem;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+
+.footer__copy,
+.footer__privacy{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+.footer__privacy{
+  justify-content: center;
+  column-gap: 1.25rem;
+}
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(229, 8%, 76%);
+}
 
+::-webkit-scrollbar-thumb{
+  background-color: hsl(228, 8%, 64%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(228, 8%, 54%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -30rem;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 12px hsla(228, 66%, 45%, .1);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: .3s;
+}
 
+.scrollup:hover{
+  transform: translateY(-.25rem);
+  color: var(--first-color);
+  
+}
 
 /* Show Scroll Up*/
-
+.show-scroll{
+  bottom: 8rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
