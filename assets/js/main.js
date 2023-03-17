@@ -7,6 +7,17 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', scrollHeader)
 
+
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeaderCourse = () =>{
+    const header = document.getElementById('headerCourse')
+    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    this.scrollY >= 50 ? header.classList.add('scroll-headerCourse') 
+                       : header.classList.remove('scroll-headerCourse')
+}
+window.addEventListener('scroll', scrollHeaderCourse)
+
 /*=============== SWIPER POPULAR ===============*/
 var swiperPopular = new Swiper(".popular__container", {
     spaceBetween: 32,
@@ -49,6 +60,38 @@ const toogleItem = (item)=>{
 }
 
 
+/*=============== QUESTIONS ACCORDION ===============*/
+const accordionItemsCourse = document.querySelectorAll('.questions__item')
+
+accordionItemsCourse.forEach((item) =>{
+    const accordionHeaderCourse = item.querySelector('.questions__header')
+
+    accordionHeaderCourse.addEventListener('click', () =>{
+        const openItemCourse = document.querySelector('.accordionCourse-open')
+
+        toggleItemCourse(item)
+
+        if(openItemCourse && openItemCourse!== item){
+            toggleItemCourse(openItemCourse)
+        }
+    })
+})
+
+const toggleItemCourse = (item) =>{
+    const accordionContentCourse = item.querySelector('.questions__content')
+
+    if(item.classList.contains('accordionCourse-open')){
+        accordionContentCourse.removeAttribute('style')
+        item.classList.remove('accordionCourse-open')
+    }else{
+        accordionContentCourse.style.height = accordionContentCourse.scrollHeight + 'px'
+        item.classList.add('accordionCourse-open')
+    }
+
+}
+
+
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -69,7 +112,31 @@ const scrollActive = () =>{
 		}                                                    
 	})
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sectionsCourse = document.querySelectorAll('sectionCourse[id]')
+    
+const scrollActiveCourse = () =>{
+  	const scrollY = window.pageYOffset
+
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.navCourse__menu a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link')
+		}else{
+			sectionsClass.classList.remove('active-link')
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActiveCourse)
+
+
+
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
@@ -122,11 +189,11 @@ const sr = ScrollReveal({
     // reset:true
 })
 
-sr.reveal(`.home__title, .popular__container, .subscribe__container, .footer__container`);
-sr.reveal(`.home__description, .footer__info`, { delay:500});
-sr.reveal(`.home__search`, { delay:600});
-sr.reveal(`.home__value`, { delay:700});
-sr.reveal(`.home__images`, { delay:800, origin:'bottom'});
-sr.reveal(`.logos__img`,{interval:100});
-sr.reveal(`.value__images, .contact__content`,{origin:'left'});
-sr.reveal(`.value__content, .contact__images`,{origin:'rigth'});
+sr.reveal(`.home__title, .homeCourse__title, .homeCourse__data, .popular__container, .subscribe__container, .footer__container`);
+sr.reveal(`.home__description, .homeCourse__img, .homeCourse__description, .footer__info`, { delay:500});
+sr.reveal(`.home__search, .homeCourse__social`, { delay:600});
+sr.reveal(`.home__value, .homeCourse__value`, { delay:700});
+sr.reveal(`.home__images, .homeCourse__images`, { delay:800, origin:'bottom'});
+sr.reveal(`.logos__img, .steps__card, .questions__group`,{interval:100});
+sr.reveal(`.value__images, .contact__content, .about__img`,{origin:'left'});
+sr.reveal(`.value__content, .contact__images, .about__data`,{origin:'rigth'});
