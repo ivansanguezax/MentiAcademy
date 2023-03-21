@@ -193,7 +193,7 @@ sr.reveal(`.home__title, .homeCourse__title, .homeCourse__data, .popular__contai
 sr.reveal(`.home__description, .homeCourse__img, .homeCourse__description, .footer__info`, { delay:500});
 sr.reveal(`.home__search, .homeCourse__social`, { delay:600});
 sr.reveal(`.home__value, .homeCourse__value`, { delay:700});
-sr.reveal(`.home__images, .homeCourse__images`, { delay:800, origin:'bottom'});
+sr.reveal(`.home__images, .homeCourse__images, .card__article`, { delay:800, origin:'bottom'});
 sr.reveal(`.logos__img, .steps__card, .questions__group`,{interval:100});
 sr.reveal(`.value__images, .contact__content, .about__img`,{origin:'left'});
 sr.reveal(`.value__content, .contact__images, .about__data`,{origin:'rigth'});
