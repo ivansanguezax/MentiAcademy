@@ -1590,10 +1590,95 @@ body.dark-theme{
   }
 }
 
+
+.main__kit{
+  background: rgb(103,59,169);
+  background: linear-gradient(329deg, rgba(103,59,169,1) 0%, rgba(34,89,201,1) 100%);
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.homeKit__container {
+  display: grid;
+  align-content: center;
+  row-gap: 2.5rem;
+  margin-top: 200px;
+}
+
+.homeKit__data {
+  text-align: center;
+  color: #FFF;
+}
+
+.homeKit__title {
+  color: #FFF;
+  font-size: var(--biggest-font-size);
+  margin: .75rem 0;
+}
+
+.homeKit__button {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #fff;
+  color: var(--first-color);
+  padding: .80rem 1.5rem;
+  border-radius: 3rem;
+  transition: .4s;
+}
+
+.homeKitCard__button{
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #fff;
+  color: var(--first-color);
+  padding: .80rem 1.5rem;
+  border-radius: 3rem;
+  transition: .4s;
+}
+
+.homeKit__button:hover {
+  box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
+}
+
+.homeKit__img img {
+  width: 230px;
+  animation: floaty 1.8s infinite alternate;
+}
+
+.homeKit__img {
+  justify-self: center;
+}
+
+.homeKit__shadow {
+  width: 130px;
+  height: 24px;
+  background-color: hsla(38, 21%, 19%, .16);
+  margin: 0 auto;
+  border-radius: 50%;
+  filter: blur(7px);
+  animation: shadow 1.8s infinite alternate;
+}
+
+.homeKit__footer {
+  display: flex;
+  justify-content: center;
+  column-gap: .5rem;
+  font-size: var(--smaller-font-size);
+  align-self: flex-end;
+}
+
+
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
-  .homeError {
+  .homeError, .homeKit {
     padding-top: 7rem;
   }
 }
@@ -1615,12 +1700,31 @@ body.dark-theme{
     width: 250px;
     height: 40px;
   }
+  .homeKit__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .homeKit__data {
+    text-align: initial;
+  }
+  .homeKit__img img {
+    width: 400px;
+  }
+  .homeKit__shadow {
+    width: 250px;
+    height: 40px;
+  }
 }
 
 @media screen and (min-width: 2048px) {
 
 
   .homeError {
+    height: initial;
+    row-gap: 4rem;
+  }
+  .homeKit {
     height: initial;
     row-gap: 4rem;
   }
