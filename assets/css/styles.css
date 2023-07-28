@@ -1415,16 +1415,25 @@ body.dark-theme{
   display: grid;
   place-items: center;
   background-color: var(--body-gradient);
-  padding-block: 4.5rem;
+
 }
 
 
-.card__container{
+.card__container-founders{
   margin-inline: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
 }
+
+.card__container-interns{
+  margin-top: 2rem;
+  margin-inline: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
 
 .card__article{
   position: relative;
@@ -1434,7 +1443,10 @@ body.dark-theme{
   text-align: center;
   box-shadow: 0 20px 24px hsla(235, 32%, 15%, .2);
   overflow: hidden;
+  width: 250px;
 }
+
+
 
 .card__imag{
   width: 250px;
@@ -1862,7 +1874,10 @@ body.dark-theme{
   .footer__content{
     gap: 2.5rem;
   }
-  .card__container{
+  .card__container-founders{
+    margin-inline: 1rem;
+  }
+  .card__container-interns{
     margin-inline: 1rem;
   }
   .card__article{
@@ -1905,8 +1920,15 @@ body.dark-theme{
   .steps__container{
     grid-template-columns: repeat(2, 1fr);
   }
-  .card__container{
-    grid-template-columns: 328px;
+  .card__container-founders{
+    margin: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+  .card__container-interns{
+    margin-top: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
   }
 }
 
@@ -1981,9 +2003,15 @@ body.dark-theme{
     .grid{
       justify-items: center;
     }
-    .card__container{
-      grid-template-columns: repeat(4, 2fr);
-      column-gap: 2rem;
+    .card__container-founders{
+      margin: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+    .card__container-interns{
+      margin-top: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
     }
     .popular__grid{
       display: grid;
@@ -2292,8 +2320,15 @@ body.dark-theme{
     right: 3rem;
   }
 
-  .card__container{
-    grid-template-columns: repeat(4, 1fr);
+  .card__container-founders{
+    margin: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  .card__container-interns{
+    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
   }
 
 }
